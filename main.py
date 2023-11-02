@@ -29,5 +29,9 @@ if __name__ == '__main__':
 
     # merging between 2 tables:
     res = df_orders.merge(df_order_items, on='order_id', how='inner')
-    specific_data_res =
+    #specific_data_res =res.iloc[:,[2,3,5]]
+    specific_data_res2 = res.loc[:,['order_id','price']]
+    print('*')
+
+    total_revenue = specific_data_res2[:,'price'].sum()
     print('*')
